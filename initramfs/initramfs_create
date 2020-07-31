@@ -72,6 +72,12 @@ mknod $INITRAMFS/dev/tty4 c 4 4
 
 #copy_including_deps /usr/bin/strace
 #copy_including_deps /usr/bin/lsof
+copy_including_deps /usr/local/bin/fbv
+copy_including_deps /sbin/v86d
+copy_including_deps /$LMK/kernel/drivers/video/fbdev/uvesafb.ko
+copy_including_deps /etc/modprobe.d/uvesafb.conf
+
+cp /tmp/png.png "${INITRAMFS}/png.png"
 
 copy_including_deps /$LMK/kernel/fs/aufs
 copy_including_deps /$LMK/kernel/fs/ext2
