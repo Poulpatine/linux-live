@@ -23,6 +23,8 @@ debug_start
                                                                                                                                                        debug_shell
 # load some modules manually first, then modprobe everything we have
 init_devs
+# show boot image
+show_image
 init_aufs
 init_zram
 
